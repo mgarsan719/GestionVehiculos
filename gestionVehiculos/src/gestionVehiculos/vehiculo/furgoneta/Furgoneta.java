@@ -3,5 +3,51 @@ package gestionVehiculos.vehiculo.furgoneta;
 import gestionVehiculos.vehiculo.Vehiculo;
 
 public abstract class Furgoneta extends Vehiculo {
+	// ATRIBUTO COMO ENUM
+    private TipoFurgoneta tipo; 
 
+    // CONSTRUCTOR 
+    public Furgoneta(String marca, String modelo, String matricula, String tipo) {
+        super(marca, modelo, matricula);
+        setTipo(tipo); 
+    }
+
+    // GETTER 
+    public String getTipo() {
+        return tipo.toString();
+    }
+
+    // SETTER 
+    public void setTipo(String tipo) {
+        this.tipo = TipoFurgoneta.valueOf(tipo);
+    }
+
+    // COMPORTAMIENTO ESPECÍFICO
+    public void cargarMercancia() {
+        System.out.println("Abriendo puertas traseras y cargando mercancía en la furgoneta tipo " + this.tipo.toString());
+    }
+
+    @Override
+    public void acelerar() {
+        System.out.println("La furgoneta " + getMarca() + " está acelerando progresivamente debido a su gran volumen.");
+    }
+
+    @Override
+    public String toString() {
+        return String.format("Furgoneta [marca= %s, modelo= %s, matricula= %s, tipo= %s]", 
+                this.getMarca(), this.getModelo(), this.getMatricula(), this.tipo.toString());
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) 
+            return true;
+        if (obj == null) 
+            return false;
+        if (getClass() != obj.getClass()) 
+            return false;
+        
+        Furgoneta other = (Furgoneta) obj;
+        return super.equals(obj) && this.tipo.equals(other.tipo);
+    }
 }
