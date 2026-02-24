@@ -21,7 +21,7 @@ public class Camper extends Furgoneta {
 
     @Override
     public void acelerar() {
-        System.out.println("La camper " + getMarca() + " está acelerando suavemente para no desordenar el interior.");
+        System.out.println("La camper está acelerando suavemente para no desordenar el interior.");
     }
 
 @Override
