@@ -24,10 +24,10 @@ public class Camper extends Furgoneta {
         System.out.println("La camper " + getMarca() + " está acelerando suavemente para no desordenar el interior.");
     }
 
-    @Override
-    public String toString() {
-        return String.format("Camper [marca= %s, modelo= %s, matricula= %s, tipo= %s, descripcion= %s]", 
-                this.getMarca(), this.getModelo(), this.getMatricula(), this.getTipo(), this.descripcion);
+@Override
+public String toString() {
+    return String.format("Camper [marca= %s, modelo= %s, matricula= %s, tipo= %s, descripcion= %s]",super.getMarca(), super.getModelo(), super.getMatricula(), super.getTipo(), this.descripcion);
+}
     }
 
     @Override
