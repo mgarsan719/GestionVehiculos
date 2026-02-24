@@ -29,13 +29,13 @@ public abstract class Furgoneta extends Vehiculo {
 
     @Override
     public void acelerar() {
-        System.out.println("La furgoneta " + getMarca() + " está acelerando progresivamente debido a su gran volumen.");
+        System.out.println("La furgoneta  está acelerando progresivamente debido a su gran volumen.");
     }
 
-    @Override
-    public String toString() {
-        return String.format("Furgoneta [marca= %s, modelo= %s, matricula= %s, tipo= %s]", 
-                this.getMarca(), this.getModelo(), this.getMatricula(), this.tipo.toString());
+@Override
+public String toString() {
+    return String.format("Furgoneta [marca= %s, modelo= %s, matricula= %s, tipo= %s]",super.getMarca(), super.getModelo(), super.getMatricula(), this.tipo.toString());
+}
     }
 
     @Override
