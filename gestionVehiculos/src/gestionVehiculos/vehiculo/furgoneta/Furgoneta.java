@@ -2,14 +2,14 @@ package gestionVehiculos.vehiculo.furgoneta;
 
 import gestionVehiculos.vehiculo.Vehiculo;
 
-public abstract class Furgoneta extends Vehiculo {
+public class Furgoneta extends Vehiculo {
 	// ATRIBUTO COMO ENUM
     private TipoFurgoneta tipo; 
 
     // CONSTRUCTOR 
     public Furgoneta(String marca, String modelo, String matricula, String tipo) {
         super(marca, modelo, matricula);
-        setTipo(tipo); 
+        this.setTipo(tipo); 
     }
 
     // GETTER 
@@ -29,14 +29,14 @@ public abstract class Furgoneta extends Vehiculo {
 
     @Override
     public void acelerar() {
-        System.out.println("La furgoneta  está acelerando progresivamente debido a su gran volumen.");
+        System.out.println("La Furgoneta acelera así: ¡prrrummm-prrrumm!");
     }
 
-@Override
-public String toString() {
-    return String.format("Furgoneta [marca= %s, modelo= %s, matricula= %s, tipo= %s]",super.getMarca(), super.getModelo(), super.getMatricula(), this.tipo.toString());
-}
-    }
+	@Override
+	public String toString() {
+	    return String.format("Furgoneta [marca= %s, modelo= %s, matricula= %s, tipo= %s]",super.getMarca(), super.getModelo(), super.getMatricula(), this.tipo.toString());
+	}
+    
 
     @Override
     public boolean equals(Object obj) {
