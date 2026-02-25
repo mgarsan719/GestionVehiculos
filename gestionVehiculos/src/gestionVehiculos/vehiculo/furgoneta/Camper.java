@@ -21,14 +21,14 @@ public class Camper extends Furgoneta {
 
     @Override
     public void acelerar() {
-        System.out.println("La camper está acelerando suavemente para no desordenar el interior.");
+        System.out.println("La Camper acelera así: ¡rrrum-rrrum!");
     }
 
-@Override
-public String toString() {
-    return String.format("Camper [marca= %s, modelo= %s, matricula= %s, tipo= %s, descripcion= %s]",super.getMarca(), super.getModelo(), super.getMatricula(), super.getTipo(), this.descripcion);
-}
-    }
+	@Override
+	public String toString() {
+	    return String.format("Camper [marca= %s, modelo= %s, matricula= %s, tipo= %s, descripcion= %s]",super.getMarca(), super.getModelo(), super.getMatricula(), super.getTipo(), this.descripcion);
+	}
+    
 
     @Override
     public boolean equals(Object obj) {
