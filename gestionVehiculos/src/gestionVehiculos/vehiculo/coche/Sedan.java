@@ -4,14 +4,14 @@ public class Sedan extends Coche {
 
 	// ATRIBUTOS
 	private int puertas;
-		
-	//CONSTRUCTOR
+
+	// CONSTRUCTOR
 	public Sedan(String marca, String modelo, String matricula, String combustible, int puertas) {
 		super(marca, modelo, matricula, combustible);
 		this.puertas = puertas;
 	}
-		
-	//GETTERS Y SETTERS
+
+	// GETTERS Y SETTERS
 	public int getPuertas() {
 		return puertas;
 	}
@@ -19,13 +19,14 @@ public class Sedan extends Coche {
 	public void setPuertas(int puertas) {
 		this.puertas = puertas;
 	}
-		
-	//METODOS
+
+	// METODOS
 	@Override
 	public String toString() {
-		return String.format("Sedan [marca= %s, modelo= %s, matricula= %s, combustible= %s, puertas= %d]", super.getMarca(), super.getModelo(), super.getMatricula(), super.getCombustible(), this.puertas);
+		return String.format("Sedan [marca= %s, modelo= %s, matricula= %s, combustible= %s, puertas= %d]",
+				super.getMarca(), super.getModelo(), super.getMatricula(), super.getCombustible(), this.puertas);
 	}
-	
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -37,16 +38,16 @@ public class Sedan extends Coche {
 		Sedan other = (Sedan) obj;
 		return super.equals(obj) && this.puertas == other.puertas;
 	}
-	
+
 	@Override
 	public void acelerar() {
-		
+
 		System.out.println("El Sedán acelera así: ¡Rrrrmmmm!");
-		
+
 	}
-	
+
 	public void ajustarAsientosTraseros() {
-		
+
 		System.out.println("Los asientos traseros se han ajustado correctamente para que quepan los pasajeros");
 
 	}

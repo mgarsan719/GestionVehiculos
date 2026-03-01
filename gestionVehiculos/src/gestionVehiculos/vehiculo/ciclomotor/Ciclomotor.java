@@ -4,16 +4,16 @@ import gestionVehiculos.vehiculo.Vehiculo;
 
 public abstract class Ciclomotor extends Vehiculo {
 
-	//ATRIBUTOS
+	// ATRIBUTOS
 	private double cilindrada;
-	
-	//CONSTRUCTOR
+
+	// CONSTRUCTOR
 	public Ciclomotor(String marca, String modelo, String matricula, double cilindrada) {
 		super(marca, modelo, matricula);
 		this.cilindrada = cilindrada;
 	}
-	
-	//GETTERS Y SETTERS
+
+	// GETTERS Y SETTERS
 	public double getCilindrada() {
 		return cilindrada;
 	}
@@ -21,11 +21,12 @@ public abstract class Ciclomotor extends Vehiculo {
 	public void setCilindrada(double cilindrada) {
 		this.cilindrada = cilindrada;
 	}
-	
-	//METODOS
+
+	// METODOS
 	@Override
 	public String toString() {
-		return String.format("Ciclomotor [marca= %s, modelo= %s, matricula= %s, cilindrada= %.2f]", super.getMarca(), super.getModelo(), super.getMatricula(), this.cilindrada);
+		return String.format("Ciclomotor [marca= %s, modelo= %s, matricula= %s, cilindrada= %.2f]", super.getMarca(),
+				super.getModelo(), super.getMatricula(), this.cilindrada);
 	}
 
 	@Override
@@ -39,5 +40,5 @@ public abstract class Ciclomotor extends Vehiculo {
 		Ciclomotor other = (Ciclomotor) obj;
 		return super.equals(obj) && this.cilindrada == other.cilindrada;
 	}
-	
+
 }
