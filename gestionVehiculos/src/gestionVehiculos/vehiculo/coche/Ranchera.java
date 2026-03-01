@@ -4,14 +4,14 @@ public class Ranchera extends Coche {
 
 	// ATRIBUTOS
 	private double capacidadMaletero;
-	
-	//CONSTRUCTOR
+
+	// CONSTRUCTOR
 	public Ranchera(String marca, String modelo, String matricula, String combustible, double capacidadMaletero) {
 		super(marca, modelo, matricula, combustible);
 		this.capacidadMaletero = capacidadMaletero;
 	}
-		
-	//GETTERS Y SETTERS
+
+	// GETTERS Y SETTERS
 	public double getCapacidadMaletero() {
 		return capacidadMaletero;
 	}
@@ -19,13 +19,16 @@ public class Ranchera extends Coche {
 	public void setCapacidadMaletero(double capacidadMaletero) {
 		this.capacidadMaletero = capacidadMaletero;
 	}
-	
-	//METODOS
+
+	// METODOS
 	@Override
 	public String toString() {
-		return String.format("Ranchera [marca= %s, modelo= %s, matricula= %s, combustible= %s, capacidadMaletero= %.2f]", super.getMarca(), super.getModelo(), super.getMatricula(), super.getCombustible(), this.capacidadMaletero);
+		return String.format(
+				"Ranchera [marca= %s, modelo= %s, matricula= %s, combustible= %s, capacidadMaletero= %.2f]",
+				super.getMarca(), super.getModelo(), super.getMatricula(), super.getCombustible(),
+				this.capacidadMaletero);
 	}
-	
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -37,14 +40,12 @@ public class Ranchera extends Coche {
 		Ranchera other = (Ranchera) obj;
 		return super.equals(obj) && this.capacidadMaletero == other.capacidadMaletero;
 	}
-	
+
 	@Override
 	public void acelerar() {
-		
+
 		System.out.println("La Ranchera acelera así: ¡Vroom, vroom!");
-		
+
 	}
-
-
 
 }

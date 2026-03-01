@@ -2,16 +2,16 @@ package gestionVehiculos.vehiculo.ciclomotor;
 
 public class Quad extends Ciclomotor {
 
-	//ATRIBUTOS
+	// ATRIBUTOS
 	private double tamanyo;
-	
-	//CONSTRUCTOR
+
+	// CONSTRUCTOR
 	public Quad(String marca, String modelo, String matricula, double cilindrada, double tamanyo) {
 		super(marca, modelo, matricula, cilindrada);
 		this.tamanyo = tamanyo;
 	}
-	
-	//GETTERS Y SETTERS
+
+	// GETTERS Y SETTERS
 	public double getTamanyo() {
 		return tamanyo;
 	}
@@ -19,11 +19,12 @@ public class Quad extends Ciclomotor {
 	public void setTamanyo(double tamanyo) {
 		this.tamanyo = tamanyo;
 	}
-	
-	//METODOS
+
+	// METODOS
 	@Override
 	public String toString() {
-		return String.format("Quad [marca= %s, modelo= %s, matricula= %s, cilindrada= %.2f, tamaño= %.2f]", super.getMarca(), super.getModelo(), super.getMatricula(), super.getCilindrada(), this.tamanyo);
+		return String.format("Quad [marca= %s, modelo= %s, matricula= %s, cilindrada= %.2f, tamaño= %.2f]",
+				super.getMarca(), super.getModelo(), super.getMatricula(), super.getCilindrada(), this.tamanyo);
 	}
 
 	@Override
@@ -40,12 +41,9 @@ public class Quad extends Ciclomotor {
 
 	@Override
 	public void acelerar() {
-		
+
 		System.out.println("El quad acelera así: brum brum bruuuuummmm brum");
-		
+
 	}
-	
-	
-	
-	
+
 }
