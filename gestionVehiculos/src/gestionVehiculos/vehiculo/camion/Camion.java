@@ -46,4 +46,8 @@ public class Camion extends Vehiculo {
 		System.out.println("El camión acelera así: brrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrommmmmmm");
 	}
 
+	public void descargarContainer() {
+		System.out.println("El container del camión se está descargando...");
+	}
+
 }
